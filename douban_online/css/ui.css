@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* CSS Document */
+/* resect */
+*{margin:0; padding:0;}
+em{font-style:normal;}
+a{color:#323232; text-decoration:none;}
+/* resect */
+
+body{
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.music_player{
+	width:510px;
+	height:244px;
+	margin:100px auto 0 auto;
+	background:#fff;
+	box-shadow:0 0 20px rgba(0,0,0,.3);
+	position:relative;
+}
+
+.player_bg{
+	position: absolute;
+	z-index: -2;
+	left: 0;
+	top: 169px;
+	width: 100%;
+	height: 278px;
+	background: #E1E8E5 url(../images/player_bg1.jpg) no-repeat center center;
+}
+
+.clearfix:after{
+	content:" ";
+	clear:both; 
+	font-size:0;
+	height:0;
+	visibility:hidden;
+	display:block;
+}
+.clearfix{
+	*zoom:1;
+}
+
+.music_cover{
+	width:244px;
+	height:244px;
+	float:left;
+}
+.music_cover img{
+	width:244px;
+	height:244px;
+}
+.music_info{
+	width:226px;
+	float:left;
+	margin:0 0 0 20px;
+}
+
+.author{
+	margin:35px 0 0 0;
+	
+}
+.play_time{
+	margin-right:3px;
+}
+.artist{
+	font-size:16px;
+	color:#323232;
+}
+.public_time{
+	color:#999;
+	margin-left:5px;
+}
+.album{
+	margin:4px 0 0 0;
+}
+.player{
+	margin:20px 0 0 0;
+}
+.title{
+	color:#009966;
+}
+.progress_box{
+	height:2px;
+	margin:10px 0 5px 0;
+	background:#e5e5e8;
+	position:relative;
+}
+.progress{
+	height:2px;
+	background:#9dd6c5;
+}
+.player_info{
+	text-align:right;
+}
+.player_opera{
+	margin:50px 0 0 0;
+	text-align:right;
+}
+.player_icon{
+	font-size:24px;
+}
+.player_icon:hover{
+	color:#898989
+}
+.rubbish_icon,.next_icon{
+	margin-left:30px;
+}
+.play_icon{
+	width:26px;
+	height:26px;
+	background:#9dd6c5;
+	color:#fff;
+	font-size:16px;
+	text-align:center;
+	line-height:26px;
+	position:absolute; 
+	right:12px;
+	top:0px;
+}
+.play_icon:hover{
+	background:#bae2d6;
+	color:#fff;
+}
+.volume_icon{
+	font-size:12px;
+	color:#939892;
+}
+.player_info{
+	color:#939892;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

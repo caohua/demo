@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MUSIC_PLAYER</title>
+<link href="css/ui.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<!--[if lte IE 7]><script src="lte-ie7.js"></script><![endif]-->
+<script type="text/plain" src="http://douban.fm/j/mine/playlist?type=n&sid=&pt=0.0&channel=46&from=mainsite&r=dcfae76a22" id="douban"></script>
+</head>
+
+<body>
+	<audio id="musicPlayer" src="http://mr3.douban.com/201309240940/971dc4d0656df7f099651eac36652c2b/view/song/small/p1451358.mp3"></audio>
+	<div class="player_bg"></div>
+	<div class="music_player clearfix">
+		
+		<div class="music_cover">
+			<img src="./images/demo1.jpg" alt="" id="cover_img"/>
+		</div>
+		
+		<div class="music_info">
+			<div id="music_data">
+				<div class="author">
+					<p class="artist"></p>
+					<p class="album">
+						<em class="album_title"><  ></em>
+						<time class="public_time">2013</time>
+					</p>
+				</div>
+				<div class="player">
+					<p class="title"></p>
+					<div class="progress_box">
+						<div class="progress" style="width:0px;" id="progress"></div>
+					</div>
+					<p class="player_info">
+						-<em class="play_time" id="totalTime">0:00</em>
+						<a href="#" class="player_icon volume_icon"  aria-hidden="true" data-icon="&#xe044;"></a>
+					</p>
+				</div>
+			</div>
+		
+			<div class="player_opera">
+				<a href="#" class="player_icon like_icon"  aria-hidden="true" data-icon="&#xe01f;"></a>
+				<a href="#" class="player_icon rubbish_icon"  aria-hidden="true" data-icon="&#xe01d;"></a>
+				<a href="#" class="player_icon next_icon" id="nextBtn" aria-hidden="true" data-icon="&#xe046;"></a>
+				<a href="#" class="player_icon play_icon" id="playBtn" aria-hidden="true" data-icon="&#xe04c;"></a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/MP5.js"></script>
+	<script type="text/javascript" src="./js/music.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			/*加载js*/
+			function loadScript(url,callback){
+				var script = document.createElement('script');
+				script.type = 'text/plain';
+				script.id = 'douban1';
+				if (script.readyState){ //for ie
+					script.onreadystatechange = function(){
+						if (script.readyState == 'loaded' || script.readyState == 'complete'){
+							script.onreadystatechange = null;
+							var js = script.innerHTML;
+							alert(js);
+							callback && callback();
+						}
+					}
+				}else{//for firefox chrome opera
+					script.onload = function(){
+						callback && callback();
+					}
+				}
+				script.src = url;
+				document.body.appendChild(script);
+			}
+			
+			var mp5 = new MP5({
+				autoPlay: true,//是否加载完后自动播放
+				musicList: $('#musicBox'),//音乐列表
+				musicBox:$('#mini-player'),//整个播放器
+				player:$('#musicPlayer')[0],//音乐播放器
+				musicInfoBox: $('#music_data'),//
+				barProgressBox: $('#progress'),
+				totalTimeBox: $('#totalTime'),
+				curMark:'playing',//当前播放标志
+				volume: 0.2,//声音0~1
+				playModel:'order',//播放模式：single , order , circulation , and random 
+				musicInfoTpl:['<div class="author">',
+					 '<p class="artist">%artist%</p>',
+						'<p class="album">',
+							'<em class="album_title">< %albumtitle% ></em>',
+							'<time class="public_time">%public_time%</time>',
+						'</p>',
+					'</div>',
+					'<div class="player">',
+						'<p class="title">%title%</p>',
+						'<div class="progress_box">',
+							'<div class="progress" style="width:0px;" id="progress"></div>',
+						'</div>',
+						'<p class="player_info">',
+							'-<em class="play_time" id="totalTime">00:00</em>',
+							'<a href="#" class="player_icon volume_icon"  aria-hidden="true" data-icon="&#xe044;"></a>',
+						'</p>',
+					'</div>'].join(''),
+
+			});
+			
+			var songs = _doubanMusic.song;
+			for (var i=0,len=songs.length; i<len; i++){
+				mp5.addMusic(songs[i]);
+			}
+			
+			//显示具体UI
+			mp5.showMusicUI(function(){
+				
+				mp5.setVolume();
+				
+				$('#playBtn').bind('click',function(){
+					if (mp5.isPause()){
+						mp5.play();
+						mp5.musicBox.find('#playBtn').addClass('pause');
+						
+					}else {
+						mp5.pause();
+						mp5.musicBox.find('#playBtn').removeClass('pause');
+					}
+				});
+				
+				$('#nextBtn').bind('click',function(){
+					mp5.playNext();
+					return false;
+				});
+				
+				$('#btnMuted').bind('click',function(){
+					if ($(this).hasClass('showMuted')){
+						mp5.setMute(false);
+						$(this).removeClass('showMuted');
+					}else{
+						mp5.setMute(true);
+						$(this).addClass('showMuted');
+						
+					}
+					
+					return false;
+				});
+				
+				$('#volBar').bind('click',function(event){
+					var offset = $(this).offset();
+					var allLen = 50;
+					var rLen = event.clientX - offset.left;
+					
+					var progress = rLen/allLen*100;
+					var player = mp5.player;
+					var vol = rLen/allLen;
+					mp5.setVolume(vol);
+					
+				});
+
+				//加载第一首歌
+				mp5.loadByIndex(0);
+				
+			});
+		});
+	
+	</script>
+</body>
+</html>
