@@ -1,0 +1,39 @@
+html,body,div,p,span,a,strong,form,table,th,td,ul,li,ol,dl,dt,dd,h1,h2,h3,h4,h5,h6,fieldset,iframe,object,pre,img,b,i{border: 0 none; margin: 0; outline: 0 none; padding: 0;}
+ul,ol,li{ list-style: none;}
+table{border-collapse: collapse;border-spacing: 0;}
+fieldset,img { border: 0 none;}
+h1, h2, h3, h4, h5, h6 {font-size: 100%;}
+body, table, input, textarea, button, select {font-family: Tahoma,sans-serif;font-size: 12px;}
+.clr{ clear: both; height: 0; font-size: 0;}
+a{ text-decoration: none; color: #2297ea;}
+a:hover{ text-decoration: underline;}
+body{repeat-x; width: 100%;}
+.index,.down,.down-info{ background: url(index-bg.jpg) center top no-repeat; min-height: 760px; width: 100%;}
+
+.header{ width: 1120px; margin: auto; height: 164px; position: relative; background: url(header-bg.jpg) no-repeat;}
+	.logo{ position: absolute; top: 45px; left: 55px; width: 260px; height: 90px;}
+	.nav{ position: absolute; top: 76px; left: 440px;}
+	.nav a{ float: left; padding: 0 16px; height: 88px; line-height: 48px; margin-right: 30px; color: #233d5e; font-family: 微软雅黑; font-size: 22px;}
+	.nav a:hover{ color: #3399ff; text-decoration: none;}
+	.nav a.current{ background: url(nav-bg.png) right top no-repeat; color: #fff; line-height: 88px;}
+	.nav a.current:hover{ color: #fff;}
+.content{ width: 1120px; margin: auto; position: relative;}
+.index .content{ background: url(index-content-bg.jpg) no-repeat;}
+.down .content{ background: url(down-content-bg.jpg) no-repeat; min-height: 309px;}
+	.index-focus{ height: 598px;}
+		.focus-box{ height: 450px; width: 882px; position: absolute; left: 124px; top: 35px;}
+		
+		.mobile-box{ position: absolute; left: 498px; top: 71px; width: 194px; height: 291px; overflow: hidden; }
+		.mobile-img-list{ height: 427px; position: absolute;}
+		.mobile-img-list li{ float: left; width: 194px; height: 291px;}
+		
+		.info-box{position: absolute; left: -170px; top: 0; width: 540px; height: 426px; overflow: hidden;}
+		.info-img-list{ height: 450px; position: absolute;}
+		.info-img-list li{ float: left; width: 540px; height: 426px;}
+		.info-img-list li img{ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')}
+		
+		.controls{ position: absolute; left: 11%; top: 435px; height: 14px;}
+		.controls li{ position: relative; left: -50%; width: 13px; height: 14px; background: url(focus-point.png) -13px 0 no-repeat; margin-right: 20px; cursor: pointer; overflow: hidden; float: left;}
+		.controls li.current{ background-position: 0 0;}
+	
+	.mobile{ position: absolute; left: 95px; top: -19px; background: url(mobile.jpg) no-repeat; width: 340px; height: 560px;}

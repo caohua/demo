@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>脸谱网jquery焦点图 - 站长素材</title>
+</head>
+<link rel="stylesheet" href="css/index.css"/>
+<link rel="stylesheet" href="css/main.css"/>
+<SCRIPT type=text/javascript src="js/jquery-1.4.2.min.js"></SCRIPT>
+<script type=text/javascript src="js/jquery.tools.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/slide.js"></script>
+<body>
+<br><br><br>
+<div class="banner">
+
+    <DIV id=home-slide class=slide-show>
+	<div id="triggers">
+	</div>
+		<div class="focus-box">
+			<div class="mobile-box">
+				<ul class="mobile-img-list">
+					
+						<li><img src="images/1.png" alt="" /></li>	
+					
+						<li><img src="images/2.png" alt="" /></li>	
+					
+						<li><img src="images/3.png" alt="" /></li>	
+					
+						<li><img src="images/4.png" alt="" /></li>	
+				</ul>
+			</div>
+			<div class="info-box">
+				<ul class="info-img-list">
+					
+						<li><img src="images/1_1.png" alt="" /></li>
+					
+						<li><img src="images/2_2.png" alt="" /></li>
+					
+						<li><img src="images/3_3.png" alt="" /></li>
+					
+						<li><img src="images/4_4.png" alt="" /></li>
+					
+				</ul>
+			</div>
+
+			<ul class="controls">
+				<li class="current"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+  </DIV>
+    <SCRIPT type=text/javascript>
+
+	$(document).ready(function(){
+		if($(".weibo-list > li").size() >= 3)
+		{
+			$(".weibo-list").scroll();	
+		}
+		$("#nav_index").addClass("current");
+	});
+	$(function(){
+		$('.focus-box').slide({
+			loop: '.mobile-img-list,.info-img-list',
+			loopBox: 'parent',
+			conClass: 'current',
+			speed: 500,
+			gap: 5000,
+			next: '.focus-img-next-btn',
+			prev: '.focus-img-prev-btn',
+			control: '.controls'
+		});
+	});
+
+        </SCRIPT>
+</DIV>
+<div style="text-align:center;clear:both"><br>
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. </p><br>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</body>
+</html>

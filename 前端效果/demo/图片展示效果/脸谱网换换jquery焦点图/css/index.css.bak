@@ -1,0 +1,46 @@
+/* CSS Document */
+body {
+	font-size:12px;
+	margin:0px;
+}
+#top{ width:100%; height:45px; background:url(huanhuandhbj.png) left repeat-x;}
+#top .alliconshow{ width:100%; height:45px; margin:0 auto;  background:url(logo2.png) no-repeat 37px top;}
+#top .alliconshow .homeicon {width:140px;height:45px; margin:0 auto;}
+.banner {
+	width:100%;
+	height:507px;
+	margin:0 auto;
+	background:url(hh_bannerbj.png) repeat-x center center;
+}
+.logo {	width:109px;	height:45px;	position:relative;	left:37px;	float:left;}
+/************************************************************************banner图片切换效果CSS开始**********************************************************************************************/
+.slide-show {
+	Z-INDEX: 10; POSITION: relative; WIDTH:1003px; height:507px; margin:0 auto ;display:block; background:url(bannerbj1.png);}
+.slide-show .current-slide {
+VISIBILITY: visible;
+}
+.slide-image {
+	Z-INDEX: 11; POSITION: absolute; VISIBILITY: hidden; margin-top: 0px; margin-left: 500px;
+}
+/*.slide-show UL {
+	Z-INDEX: 20;
+	POSITION:absolute;
+	DISPLAY: block;
+	TOP: 460px;
+	LEFT: 350px;
+	width:604px;
+	height:26px;
+	background:url(banner_tabbj2.png) no-repeat left;
+	padding-left:15px;
+}
+.slide-show UL LI {
+	LIST-STYLE-TYPE: none; WIDTH:auto; FLOAT: left; HEIGHT: 26px;margin-right:10px; margin-left:10px;CURSOR: pointer; line-height:30px; color:#949494; white-space: nowrap; _overflow:hidden;_padding-top:10px;
+}
+.slide-show UL LI img{margin-left:15px; vertical-align:middle\9; *margin-bottom:3px; display:inline; overflow:hidden;}
+.slide-show UL .current {
+	BACKGROUND: url(smalldhbj.jpg) no-repeat center center; color:#FFF;_BACKGROUND: url(smalldhbj.jpg) no-repeat -7px 5px;
+}
+.slide-show UL .hover {
+	BACKGROUND: url(smalldhbj.jpg) no-repeat center center;_BACKGROUND: url(smalldhbj.jpg) no-repeat -7px 5px;
+}*/
+/************************************************************************banner图片切换效果CSS结束**********************************************************************************************/

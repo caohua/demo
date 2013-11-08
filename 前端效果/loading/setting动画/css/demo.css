@@ -1,0 +1,258 @@
+.setting_box {
+  padding: 5px;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid #ccc;
+  background: #666;
+  color: #fff;
+  position: relative;
+}
+.setting_box a {
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  display: block;
+}
+.setting_box a i {
+  position: absolute;
+}
+.setting_box a .big_cog {
+  font-size: 22px;
+  left: 3px;
+  top: 14px;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+  -webkit-animation-delay: 0;
+  -webkit-animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-direction: normal;
+  -moz-animation-delay: 0;
+  -moz-animation-play-state: running;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-timing-function: linear;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-direction: normal;
+  -ms-animation-delay: 0;
+  -ms-animation-play-state: running;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-timing-function: linear;
+  -o-animation-iteration-count: infinite;
+  -o-animation-direction: normal;
+  -o-animation-delay: 0;
+  -o-animation-play-state: running;
+  -o-animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-delay: 0;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: animation_rotate;
+  -webkit-animation-duration: 9s;
+  -moz-animation-name: animation_rotate;
+  -moz-animation-duration: 9s;
+  -ms-animation-name: animation_rotate;
+  -ms-animation-duration: 9s;
+  -o-animation-name: animation_rotate;
+  -o-animation-duration: 9s;
+  animation-name: animation_rotate;
+  animation-duration: 9s;
+}
+.setting_box a .medium_cog {
+  font-size: 16px;
+  left: 24px;
+  top: 11px;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+  -webkit-animation-delay: 0;
+  -webkit-animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-direction: normal;
+  -moz-animation-delay: 0;
+  -moz-animation-play-state: running;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-timing-function: linear;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-direction: normal;
+  -ms-animation-delay: 0;
+  -ms-animation-play-state: running;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-timing-function: linear;
+  -o-animation-iteration-count: infinite;
+  -o-animation-direction: normal;
+  -o-animation-delay: 0;
+  -o-animation-play-state: running;
+  -o-animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-delay: 0;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: animation_rotatere;
+  -webkit-animation-duration: 5s;
+  -moz-animation-name: animation_rotatere;
+  -moz-animation-duration: 5s;
+  -ms-animation-name: animation_rotatere;
+  -ms-animation-duration: 5s;
+  -o-animation-name: animation_rotatere;
+  -o-animation-duration: 5s;
+  animation-name: animation_rotatere;
+  animation-duration: 5s;
+}
+.setting_box a .small_cog {
+  font-size: 12px;
+  left: 32px;
+  top: 25px;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+  -webkit-animation-delay: 0;
+  -webkit-animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-direction: normal;
+  -moz-animation-delay: 0;
+  -moz-animation-play-state: running;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-timing-function: linear;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-direction: normal;
+  -ms-animation-delay: 0;
+  -ms-animation-play-state: running;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-timing-function: linear;
+  -o-animation-iteration-count: infinite;
+  -o-animation-direction: normal;
+  -o-animation-delay: 0;
+  -o-animation-play-state: running;
+  -o-animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-delay: 0;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: animation_rotate;
+  -webkit-animation-duration: 3s;
+  -moz-animation-name: animation_rotate;
+  -moz-animation-duration: 3s;
+  -ms-animation-name: animation_rotate;
+  -ms-animation-duration: 3s;
+  -o-animation-name: animation_rotate;
+  -o-animation-duration: 3s;
+  animation-name: animation_rotate;
+  animation-duration: 3s;
+}
+.button1 {
+  width: 300px;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  color: red;
+  font: 14px/1em bold "宋体";
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  background: none;
+  border: none;
+  border-radius: 4px 4px 0 0;
+  cursor: pointer;
+  -webkit-animation: button1 1000ms ease 12s infinite normal both;
+  animation: button1 1000ms ease 12s infinite normal both;
+}
+.button1:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+/* Rotate Animation */
+@-webkit-keyframes animation_rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes animation_rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes animation_rotatere {
+  0% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+@-moz-keyframes animation_rotatere {
+  0% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes button1 {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(10px);
+  }
+}
+@keyframes button1 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
