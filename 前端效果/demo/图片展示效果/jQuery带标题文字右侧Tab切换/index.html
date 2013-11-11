@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="zh-CN">
+<title>jQuery带标题文字右侧选项卡 - 站长素材</title>
+<link href="css/zzsc.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.js"></script>
+</head>
+
+<body>
+
+<div class="m-slide" style="margin:30px auto">
+	<ul class="img" style="position: relative; width: 490px; height: 200px;">
+		<li style="position: absolute; width: 490px; left: 0px; top: 0px; display: list-item;">
+		<a href="http://sc.chinaz.com/" target="_blank"><img src="images/1.jpg"></a></li>
+		<li style="position: absolute; width: 490px; left: 0px; top: 0px; display: none;">
+		<a href="http://sc.chinaz.com/" target="_blank"><img src="images/2.jpg"></a></li>
+		<li style="position: absolute; width: 490px; left: 0px; top: 0px; display: none;">
+		<a href="http://sc.chinaz.com/" target="_blank"><img src="images/3.jpg"></a></li>
+		<li style="position: absolute; width: 490px; left: 0px; top: 0px; display: none;">
+		<a href="http://sc.chinaz.com/" target="_blank"><img src="images/4.jpg"></a></li>
+	</ul>
+	<ul class="tab">
+		<li class="  on"><a href="http://sc.chinaz.com"><b></b>
+		<span class="title">餐垫艺术 </span><span class="des">让餐桌色彩丰富起来 </span></a>
+		</li>
+		<li><a href="http://sc.chinaz.com"><b></b><span class="title">秋冬款连衣裙 
+		</span><span class="des">优雅的小女人味 </span></a></li>
+		<li class=" "><a href="http://sc.chinaz.com"><b></b><span class="title">
+		秋冬围巾 </span><span class="des">温暖来袭 </span></a></li>
+		<li class=" "><a href="http://sc.chinaz.com"><b></b><span class="title">
+		帅气军工装 </span><span class="des">时尚中性风 </span></a></li>
+	</ul>
+	<b class="bottom-shadow"></b></div>
+<script type="text/javascript">jQuery(".m-slide").slide({ titCell:".tab li", mainCell:".img",effect:"fold", autoPlay:true});</script>
+<div style="text-align:center;clear:both">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</body>
+</html>
